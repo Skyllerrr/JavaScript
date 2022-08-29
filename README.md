@@ -13,7 +13,7 @@
     </head>
     <body>
         <script>
-            alert('Hello world');
+            console.log('Hello world');
         </script>
     </body>
 </html>
@@ -57,10 +57,85 @@
     */
    
     // 실습용 코드 입니다.
-    alert(1+2); // 3입니다.
+    console.log(1+2); // 3입니다.
 </script>
 </body>
 </html>
 ```
 이와 같이 /* */를 사용하게 되면 안에 들어있는 모든 <br>내용들은 주석처리가 된다. (여러줄도 가능) <br>
 기본적으로는 주석을 //표시로 나타내며 다음과 같은 <br>예시코드로 alert(1+2); 에 대한 설명과 답을 사용자가 주석처리로 말해줄 수도 있다.
+
+<br>
+<br>
+<br>
+
+## 숫자와 문자
+<br>
+
+### [수의 표현]
+
+```javascript
+console.log(1 + 1); // 결과 : 2
+console.log(1.2 + 1.3); // 결과 : 2.5
+```
+자바스크립트에서는 큰따옴표나 작은따옴표가 붙지 않은 숫자는 숫자로 인식한다.
+
+<br>
+<br>
+<br>
+
+### [수의 연산]
+
+```javascript
+Math.pow(3,2);       // 9,   3의 2승 
+Math.round(10.6);    // 11,  10.6을 반올림
+Math.ceil(10.2);     // 11,  10.2를 올림
+Math.floor(10.6);    // 10,  10.6을 내림
+Math.sqrt(9);        // 3,   3의 제곱근
+Math.random();       // 0부터 1.0 사이의 랜덤한 숫자
+```
+예를 들어, <u>Math.round(100 * Math.random());</u>은 랜덤한 숫자에 100을 곱한 후에 반올림을 하여 소수점을 없앤 정수값의 결과가 나온다.
+
+<br>
+<br>
+<br>
+
+### [문자의 표현]
+
+```javascript
+console.log('coding everybody');
+console.log("coding everybody");
+
+console.log('egoing\'s coding everybody');
+
+typeof 1 // 결과 : number
+typeof "1" // 결과 : string
+```
+문자형식으로 만들때는 작은 따옴표와 큰 따옴표끼리의 묶음으로 나타낼 수 있는데, 3번째 코드와 같이 <br>작은 따옴표 안에 작은 따옴표가 부득이하게 들어갈 때는 \ (역슬래쉬)를 붙여 구분하여 문자로 만들 수 있다.
+<br>
+<br>
+typeof 라는 명령어로 어떠한 형태를 가지는지 알 수 있다.
+
+<br>
+<br>
+<br>
+
+### [문자의 연산]
+
+```javascript
+console.log("coding" + " everybody");
+
+console.log(1+1); // 결과 : 2
+console.log("1"+"1"); // 결과 : "11"
+
+console.log("coding everybody").length; // 결과 : 16
+console.log("coding everybody".indexOf("c")); // 결과 : 0
+```
+문자끼리 합쳐서 결과를 출력하기 위해선 + 기호로 만들 수 있다.
+
+<br>
+다음 코드는 숫자끼리 합친 결과와 문자끼리 합친 결과이다.
+
+<br>
+.length 메소드는 문자의 길이 즉, 개수를 파악하여 출력해주는 결과이다. <br>
+.indexOf() 메소드는 해당 인덱스안에 찾고 싶은 문자를 적어주면, 몇 번째에 존재하는지 출력해주는 결과이다.
