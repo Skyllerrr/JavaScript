@@ -139,3 +139,49 @@ console.log("coding everybody".indexOf("c")); // 결과 : 0
 <br>
 .length 메소드는 문자의 길이 즉, 개수를 파악하여 출력해주는 결과이다. <br>
 .indexOf() 메소드는 해당 인덱스안에 찾고 싶은 문자를 적어주면, 몇 번째에 존재하는지 출력해주는 결과이다.
+
+<br>
+<br>
+<br>
+
+## 변수
+<br>
+
+### [변수의 사용법]
+
+```javascript
+var a = 1;
+console.log(a + 1); // 결과 : 2
+
+var first = "coding";
+console.log(first + " everybody"); // 결과 : coding everybody
+
+var a = 'coding', b = 'everybody';
+console.log(a); // 결과 : coding
+console.log(b); // 결과 : everybody
+```
+순서대로 a라는 변수에 1을 더하면서 결과가 2로 출력이 된다. <br> 
+first라는 변수에 everybody라는 문자열을 더하면서 결과가 coding everybody로 출력이 된다. <br>
+a라는 변수와 b라는 변수에 각각 coding, everybody라는 문자열을 정의하고 각각 출력하게 된다.
+
+<br>
+<br>
+<br>
+
+### [변수의 효용]
+
+```javascript
+var a = 100;
+a = a + 10;
+console.log(a);
+
+a = a / 10;
+console.log(a);
+
+a = a - 10;
+console.log(a);
+
+a = a * 10;
+console.log(a);
+```
+a라는 변수를 지정하고 100의 숫자 데이터를 넣는다. 변수에 10을 더해 그 결과를 a에 다시 넣게되면 출력값은 110이 된다. <br>이후, 계속된 연산을 하게 되면 해당 연산에 대한 출력값이 결과에 맞게 나온다.
