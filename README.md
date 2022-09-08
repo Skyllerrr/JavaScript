@@ -185,3 +185,85 @@ a = a * 10;
 console.log(a);
 ```
 a라는 변수를 지정하고 100의 숫자 데이터를 넣는다. 변수에 10을 더해 그 결과를 a에 다시 넣게되면 출력값은 110이 된다. <br>이후, 계속된 연산을 하게 되면 해당 연산에 대한 출력값이 결과에 맞게 나온다.
+
+<br>
+<br>
+<br>
+
+## 비교
+<br>
+
+### [연산자]
+
+연산자란 값에 대해서 어떤 작업을 컴퓨터에게 지시하기 위한 기호이다. <br>
+예를 들어, "**a = 1**은 a라는 변수에 1이라는 값을 대입해준다"라는 뜻이다.
+
+<br>
+<br>
+<br>
+
+### [비교 연산자 (==와 ===)]
+
+```javascript
+alert(1==2) // 결과 : false
+alert(1==1) // 결과 : true
+alert("one"=="two") // 결과 : false 
+alert("one"=="one") // 결과 : true
+
+alert(1=='1'); // 결과 : true
+alert(1==='1'); // 결과 : false
+```
+"=="은 양쪽의 값이 똑같으면 true, 아니면 false를 출력한다.
+
+"==="와 "=="의 차이점은 양쪽의 값과 데이터 형식까지 모두 같으면 "==="를 사용하여 true를 출력하게 되며, <br> 데이터 형식을 생각하지 않아도 양쪽의 값이 같으면 "=="를 사용하여 true를 출력하게 된다.
+
+<br>
+<br>
+<br>
+
+### [===를 사용하자!]
+
+```javascript
+alert(null == undefined); // 결과 : true
+alert(null === undefined); // 결과 : false
+alert(true == 1); // 결과 : true
+alert(true === 1); // 결과 : false
+alert(true == '1'); // 결과 : true
+alert(true === '1'); // 결과 : false
+ 
+alert(0 === -0); // 결과 : true
+alert(NaN === NaN); // 결과 : false
+```
+null과 undefined는 값이 없다는 의미의 데이터 형이다. <br>
+null은 값이 없음을 명시적으로 표시한 것이고, undefined는 그냥 값이 없는 상태이다.
+
+NaN은 0/0과 같은 연산의 결과로 만들어지는 특수한 데이터 형인데, 숫자가 아니라는 뜻이다.
+
+따라서 null과 undefined, true와 1 등등 동등연산자 "=="는 숫자 1은 true로 간주하여 항상 true를 출력할 수 있지만, 일치 연산자 "==="는 데이터 형이 다르기 때문에 같은 데이터 형이 아닌 이상 항상 false가 나올 수 밖에 없다.
+
+<a href="http://dorey.github.io/JavaScript-Equality-Table/">Link : ==와 ===의 차이점을 나타낸 표</a> ***[초록색칸은 true, 흰색칸은 false]***
+
+<br>
+<br>
+<br>
+
+### [부정과 부등호]
+
+```javascript
+"!="
+console.log(1!=2); // 결과 : true
+console.log(1!=1); // 결과 : false
+console.log("one"!="two"); // 결과 : true
+console.log("one"!="one"); // 결과 : false
+
+">"
+console.log(10>20); // 결과 : false
+console.log(10>1); // 결과 : true
+console.log(10>10); // 결과 : false
+
+">="
+console.log(10>=20); // 결과 : false
+console.log(10>=1); // 결과 : true
+console.log(10>=10); // 결과 : true
+```
+각각 부정(아니다)과 부등호(크다, 크거나 같다, 작다, 작거나 같다)에 관련된 출력 결과이다.
