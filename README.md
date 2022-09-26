@@ -267,3 +267,270 @@ console.log(10>=1); // 결과 : true
 console.log(10>=10); // 결과 : true
 ```
 각각 부정(아니다)과 부등호(크다, 크거나 같다, 작다, 작거나 같다)에 관련된 출력 결과이다.
+
+<br>
+<br>
+<br>
+
+## 조건문
+<br>
+
+### [조건문이란?]
+
+```JavaScript
+if(true) {
+    console.log('result : true');
+}
+
+if(false) {
+    console.log('result : true');
+}
+
+if(true) {
+    alert(1);
+    alert(2);
+    alert(3);
+    alert(4);
+}
+alert(5);
+
+if(false) {
+    alert(1);
+    alert(2);
+    alert(3);
+    alert(4);
+}
+alert(5);
+```
+처음 예시의 코드는 조건이 true인 코드만 result : true라는 문구가 출력이 되고, false 조건일때는 아예 출력이 되지 않는다.
+
+두 번째 코드는 true 조건에서 alert을 사용하여 1부터 시작하여 확인 버튼을 누를 때 마다 2,3,4,5가 순서대로 출력되며, false 조건일때는 false 바깥쪽에 있는 5만 출력이 된다.
+
+<br>
+<br>
+<br>
+
+### [else와 else if]
+
+if else
+```JavaScript
+//ex 1)
+
+if(true){
+    alert(1);
+} else {
+    alert(2);
+}
+// 결과 : 1
+
+//ex 2)
+
+if(false){
+    alert(1);
+} else {
+    alert(2);
+}
+// 결과 : 2
+```
+else if
+```JavaScript
+//ex 1)
+
+if(false){
+    alert(1);
+} else if(true){
+    alert(2);
+} else if(true){
+    alert(3);
+} else {
+    alert(4);
+}
+// 결과 : 2
+
+//ex 2)
+
+if(false){
+    alert(1);
+} else if(false){
+    alert(2);
+} else if(true){
+    alert(3);
+} else {
+    alert(4);
+}
+//결과 : 3
+
+//ex 3)
+
+if(false){
+    alert(1);
+} else if(false){
+    alert(2);
+} else if(false){
+    alert(3);
+} else {
+    alert(4);
+}
+//결과 : 4
+```
+if, else if 안의 true 또는 false에 따라 결과값이 달라진다.
+
+<br>
+<br>
+<br>
+
+### [조건문의 응용]
+
+```JavaScript
+id = prompt('아이디를 입력해주세요.')
+        if(id=='egoing'){
+            alert('아이디가 일치 합니다.')
+        } else {
+            alert('아이디가 일치하지 않습니다.')
+        }
+```
+코드를 실행하게 되면, prompt 명령어를 통해 아이디를 입력하라는 빈칸이 생성된다. <br> 입력한 아이디는 id안에 들어가게 되고, 이 id가 egoing이라고 입력하게 되면 아이디가 일치 한다고 출력이 되며, 다르면 아이디가 일치하지 않는다고 출력이 된다.
+
+```JavaScript
+id = prompt('아이디를 입력해주세요.');
+        if(id=='egoing'){
+            password = prompt('비밀번호를 입력해주세요.');
+            if(password==='111111'){
+                alert('로그인 하셨습니다.');
+            } else {
+                alert('비밀번호가 다릅니다.');
+            }
+        } else {
+            alert('아이디가 일치하지 않습니다.');
+        }
+```
+비밀번호도 마찬가지로 id가 일치한 경우에만 실행이 되며, 일치하지 않으면 아이디가 일치하지 않는다고 출력이 된다. <br> id가 일치한 경우, password를 111111로 입력하게 되면 로그인을 할 수 있으며, 다르면 로그인에 실패하게 되며 비밀번호가 다르다고 출력이 된다.
+
+<br>
+<br>
+<br>
+
+### [논리 연산자]
+
+ex 1) &&
+```JavaScript
+id = prompt('아이디를 입력해주세요.');
+        password = prompt('비밀번호를 입력해주세요.');
+        if(id=='egoing' && password=='111111'){
+            alert('인증 했습니다.');
+        } else {
+            alert('인증에 실패 했습니다.');
+        }
+```
+위의 조건문의 응용 파트에서 아이디와 비밀번호를 입력하여 결과값을 출력하는 예제에서 &&를 이용하여 조건을 합친 후, 결과값을 나타낼 수도 있다.
+
+ex 2) || 를 이용한 예제 개선
+```JavaScript
+id = prompt('아이디를 입력해주세요.');
+password = prompt('비밀번호를 입력해주세요.');
+if((id==='egoing' || id==='k8805' || id==='sorialgi') && password==='111111'){
+    alert('인증 했습니다.');
+} else {
+    alert('인증에 실패 했습니다.');
+}
+```
+or 연산자를 이용하여 id값이 egoing 이거나 k8805 이거나 sorialgi 일 때, password가 111111이면 인증을 할 수 있지만, id값이 셋 중 하나라도 일치하지 않게 되면 인증에 실패하는 결과값을 얻게 된다.
+
+<br>
+<br>
+<br>
+
+### [boolean의 대체제]
+
+if 뒤에 boolean값 대신 if(0){alert(1);}이나, if(1){alert(1);}로 0이나 1처럼 숫자를 넣어서 쓸 수 있지만, 보통은 잘 사용하지 않는다.
+
+<br>
+<br>
+<br>
+
+## 반복문
+<br>
+
+### [반복문과 기본문법 - while]
+
+while (조건){
+    반복해서 실행할 코드
+}
+
+<br>
+<br>
+<br>
+
+### [반복 조건]
+
+```JavaScript
+var i = 0;
+// 종료조건으로 i의 값이 10보다 작다면 true, 같거나 크다면 false가 된다.
+while(i < 10){
+    // 반복이 실행될 때마다 coding everybody <br />이 출력된다. <br /> 줄바꿈을 의미하는 HTML 태그
+    document.write('coding everybody <br />');
+    // i의 값이 1씩 증가한다.
+    i++
+}
+```
+
+<br>
+<br>
+<br>
+
+### [for문]
+
+문법 - 
+for(초기화; 반복조건; 반복이 될 때마다 실행되는 코드){
+    반복해서 실행될 코드
+}
+```JavaScript
+예제
+for(var i = 0; i < 10; i++){
+    document.write('coding everybody'+i+'<br />');
+}
+```
+
+<br>
+<br>
+<br>
+
+### [반복문의 제어]
+
+```JavaScript
+for(var i = 0; i < 10; i++) {
+    if(i === 5) {
+        break;
+    }
+    document.write('Coding everybody' + i + '<br>');
+}
+```
+i = 0부터 시작해서 1씩 증가하는 반복문에서 i값이 5가 되었을 때, break를 사용하여 해당하는 결과값을 중간에 멈출 수 있다. 반대로, continue는 멈추지않고 계속 출력된다.
+
+<br>
+<br>
+<br>
+
+### [반복문의 중첩사용과 디버거]
+
+```JavaScript
+// 0부터 9까지 변수 i에 순차적으로 값을 할당        
+for(var i = 0; i < 10; i++){
+    // 0부터 9까지의 변수를 j의 값에 순차적으로 할당
+    for(var j = 0; j < 10; j++){    
+        // i와 j의 값을 더한 후에 출력
+        // String은 숫자인 i와 j의 데이터 타입을 문자로 형태를 변환하는 명령이다. 
+        // String()을 제거하고 실행해보면 의미가 좀 더 분명하게 드러날 것이다.
+        document.write(String(i)+String(j)+'<br />');
+    }
+}
+```
+
+<br>
+<br>
+<br>
+
+## 함수
+<br>
+
+### [함수란?]
