@@ -534,3 +534,14 @@ for(var i = 0; i < 10; i++){
 <br>
 
 ### [함수란?]
+
+```javascript
+function numbering() {
+    i = 0;
+    while(i < 10){
+        document.write(i);
+        i += 1;
+    }
+}
+numbering();
+```
