@@ -545,3 +545,9 @@ function numbering() {
 }
 numbering();
 ```
+function 함수명(인자) 
+
+{
+    코드 내용
+    return 반환값
+}
