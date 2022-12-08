@@ -552,3 +552,162 @@ function 함수명(인자)
     코드 내용
     return 반환값
 }
+
+<br>
+<br>
+<br>
+
+### [함수의 출력]
+
+```Javascript
+function get_member1() {
+    return 'egoing';
+}
+
+function get_member2() {
+    return 'k8805';
+}
+
+alert(get_member1());
+alert(get_member2());
+```
+함수의 출력은 return이라는 명령어로 보내고 있다.<br> 해당 결과는 egoing이 먼저 나오고 다음 k8805가 나온다.
+
+<br>
+<br>
+<br>
+
+### [함수의 입력]
+
+```Javascript
+function get_argument(arg) {
+    return arg*1000;
+}
+
+alert(get_argument(1));
+alert(get_argument(2));
+```
+함수의 입력에서는 arg라는 매개변수를 입력하여 return값을 지정해준다. <br>
+해당 결과는 1000과 2000이 출력이 된다.
+
+<br>
+<br>
+<br>
+
+## 배열
+
+### [배열의 생성]
+
+```Javascript
+var member = ['egoing', 'k8805', 'sorialgi']
+
+alert(member[0]);
+alert(member[1]);
+alert(member[2]);
+```
+member라는 이름의 배열안에 내용들을 입력하고 순서대로 출력한다.
+
+<br>
+<br>
+<br>
+
+### [배열의 사용 - 배열과 반복문]
+
+```Javascript
+function get_members() {
+    return ['egoing', 'k8805', 'sorialgi'];
+}
+members = get_members();
+
+// members.length는 배열에 담긴 값의 숫자를 알려준다.
+for (i = 0; i < members.length; i++) {
+    // members[i].toUpperCase()는 members[i]에 담긴 문자를 대문자로 변환해준다.
+    document.write(members[i].toUpperCase());
+    document.write('<br />');
+}
+```
+해당 결과는 배열에 입력된 3가지의 정보가 모두 대문자로 줄바꿈이 이루어진채 <br> 출력이 된다.
+
+<br>
+<br>
+<br>
+
+### [데이터의 추가]
+
+```Javascript
+var members = ['a', 'b', 'c'];
+
+members.push('d');
+
+document.write(members);
+
+
+
+var test = ['a', 'b', 'c'];
+
+test = test.concat('d', 'e');
+
+document.write(test);
+
+
+
+var testtest = ['a', 'b', 'c'];
+
+testtest.unshift('d');
+
+document.write(testtest);
+
+
+
+var member = ['a', 'b', 'c'];
+
+member.splice(0, 0, 'd');
+
+document.write(member);
+```
+push명령어는 해당하는 데이터를 맨 뒤쪽에 추가한다는 내용이다. <br>
+concat명령어는 배열 형식으로 지정하며, 해당하는 배열의 데이터들을 뒤쪽에 추가한다는 내용이다. <br>
+unshift명령어는 해당하는 데이터를 맨 앞쪽에 추가한다는 내용이다. <br>
+splice명령어는 n번째 인수, 인수의 위치(0 = 인수의 앞쪽, 1 = 인수 그 자체), 어떤 인수를 추가하거나 바꾼다는 내용이다.
+
+<br>
+<br>
+<br>
+
+### [데이터의 제거와 정렬]
+
+```Javascript
+var coding = ['a', 'b', 'c'];
+
+coding.shift();
+
+document.write(coding);
+
+
+
+var coding = ['a', 'b', 'c'];
+
+coding.pop();
+
+document.write(coding);
+
+
+
+var coding = ['b', 'c', 'a'];
+
+coding.sort();
+
+document.write(coding);
+
+
+
+var coding = ['b', 'c', 'a'];
+
+coding.reverse();
+
+document.write(coding);
+```
+shift명령어는 배열의 첫 번째 원소를 제거한다. <br>
+pop명령어는 배열의 마지막 원소를 제거한다. <br>
+sort명령어는 배열을 정렬하게 되며, 예를 들어 위의 코드 예시 처럼 'b', 'c', 'a'처럼 나타나있으면, 알파벳 정렬로 'a', 'b', 'c'가 출력이 된다. <br>
+reverse명령어는 배열을 반대로(거꾸로) 정렬하게 되며, 'b', 'c', 'a'처럼 나타나있으면, <br> 알파벳 반대 정렬로 'c', 'b', 'a'가 출력이 된다.
